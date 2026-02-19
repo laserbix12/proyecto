@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+:host {
+  display: block;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 0;
+  }
+}

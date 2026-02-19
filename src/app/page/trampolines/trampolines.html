@@ -1,0 +1,45 @@
+<div class="page-container">
+  <h1>Trampolines y Saltadores</h1>
+  <p class="subtitle">Diversión saltadora para toda la familia</p>
+
+  <div class="products-grid">
+    <article class="product-card">
+      <div class="product-image">
+        <img [src]="img1 || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVjf0AOgaSh2vFGwjvs0Is81xC2UjFU5r9aA&s'" alt="Producto" style="width: 100%; border-radius: 8px; aspect-ratio: 4/3; object-fit: cover;" />
+      </div>
+      <div class="image-url-row">
+        <input #imgUrl1 type="text" (input)="img1 = imgUrl1.value" placeholder="Pega URL de la imagen" class="image-url-input" />
+        <button type="button" class="copy-btn" (click)="copy(imgUrl1.value)">Copiar URL</button>
+      </div>
+      <h3>Minitrampolín</h3>
+      <p class="price">89,99 €</p>
+      <button class="btn-add">Agregar al carrito</button>
+    </article>
+
+    <article class="product-card">
+      <div class="product-image">
+        <img [src]="img2 || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY-AXzc6g35ZYz1wtYr7ezh7uy2d3zVi-eSw&s'" alt="Producto" style="width: 100%; border-radius: 8px; aspect-ratio: 4/3; object-fit: cover;" />
+      </div>
+      <div class="image-url-row">
+        <input #imgUrl2 type="text" (input)="img2 = imgUrl2.value" placeholder="Pega URL de la imagen" class="image-url-input" />
+        <button type="button" class="copy-btn" (click)="copy(imgUrl2.value)">Copiar URL</button>
+      </div>
+      <h3>Trampolín Compacto</h3>
+      <p class="price">179,99 €</p>
+      <button class="btn-add">Agregar al carrito</button>
+    </article>
+
+    <article class="product-card">
+      <div class="product-image">
+        <img [src]="img3 || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyouybAIpJqiL_8vV1Ee1bFj00reuzrhbXEg&s'" alt="Producto" style="width: 100%; border-radius: 8px; aspect-ratio: 4/3; object-fit: cover;" />
+      </div>
+      <div class="image-url-row">
+        <input #imgUrl3 type="text" (input)="img3 = imgUrl3.value" placeholder="Pega URL de la imagen" class="image-url-input" />
+        <button type="button" class="copy-btn" (click)="copy(imgUrl3.value)">Copiar URL</button>
+      </div>
+      <h3>Trampolín Grande</h3>
+      <p class="price">349,99 €</p>
+      <button class="btn-add">Agregar al carrito</button>
+    </article>
+  </div>
+</div>

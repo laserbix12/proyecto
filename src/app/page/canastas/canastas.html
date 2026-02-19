@@ -1,0 +1,45 @@
+<div class="page-container">
+  <h1>Juegos de Canastas</h1>
+  <p class="subtitle">Canastas de tiro para todas las edades</p>
+
+  <div class="products-grid">
+    <article class="product-card">
+      <div class="product-image">
+        <img [src]="img1 || 'https://i5.walmartimages.com/asr/7f8c443f-6978-487a-b140-c2ce9c98b6f4.5542e16543c201d41d80963040b200bf.jpeg'" alt="Producto" style="width: 100%; border-radius: 8px; aspect-ratio: 4/3; object-fit: cover;" />
+      </div>
+      <div class="image-url-row">
+        <input #imgUrl1 type="text" (input)="img1 = imgUrl1.value" placeholder="Pega URL de la imagen" class="image-url-input" />
+        <button type="button" class="copy-btn" (click)="copy(imgUrl1.value)">Copiar URL</button>
+      </div>
+      <h3>Canasta Infantil</h3>
+      <p class="price">79,99 €</p>
+      <button class="btn-add">Agregar al carrito</button>
+    </article>
+
+    <article class="product-card">
+      <div class="product-image">
+        <img [src]="img2 || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCCbd7YB3PHKAS0OfLGVW9g5s14o7l4sDOvQ&s'" alt="Producto" style="width: 100%; border-radius: 8px; aspect-ratio: 4/3; object-fit: cover;" />
+      </div>
+      <div class="image-url-row">
+        <input #imgUrl2 type="text" (input)="img2 = imgUrl2.value" placeholder="Pega URL de la imagen" class="image-url-input" />
+        <button type="button" class="copy-btn" (click)="copy(imgUrl2.value)">Copiar URL</button>
+      </div>
+      <h3>Canasta Estándar</h3>
+      <p class="price">149,99 €</p>
+      <button class="btn-add">Agregar al carrito</button>
+    </article>
+
+    <article class="product-card">
+      <div class="product-image">
+        <img [src]="img3 || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrCck5sTTpEu5lujH4pI2-zjt7hm0cktNpmw&s'" alt="Producto" style="width: 100%; border-radius: 8px; aspect-ratio: 4/3; object-fit: cover;" />
+      </div>
+      <div class="image-url-row">
+        <input #imgUrl3 type="text" (input)="img3 = imgUrl3.value" placeholder="Pega URL de la imagen" class="image-url-input" />
+        <button type="button" class="copy-btn" (click)="copy(imgUrl3.value)">Copiar URL</button>
+      </div>
+      <h3>Canasta Profesional</h3>
+      <p class="price">299,99 €</p>
+      <button class="btn-add">Agregar al carrito</button>
+    </article>
+  </div>
+</div>

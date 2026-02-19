@@ -1,3 +1,28 @@
 import { Routes } from '@angular/router';
+import { Pingpong } from './page/pingpong/pingpong';
+import { Futbolines } from './page/futbolines/futbolines';
+import { Billares } from './page/billares/billares';
+import { Airhockey } from './page/airhockey/airhockey';
+import { Canastas } from './page/canastas/canastas';
+import { Porterias } from './page/porterias/porterias';
+import { Trampolines } from './page/trampolines/trampolines';
+import { Multijuegos } from './page/multijuegos/multijuegos';
+import { Login } from './page/login/login';
+import { Register } from './page/register/register';
+import { Contacto } from './page/contacto/contacto';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  { path: '', component: Multijuegos },
+  { path: 'pingpong', component: Pingpong },
+  { path: 'futbolines', component: Futbolines },
+  { path: 'billares', component: Billares },
+  { path: 'airhockey', component: Airhockey },
+  { path: 'canastas', component: Canastas },
+  { path: 'porterias', component: Porterias },
+  { path: 'trampolines', component: Trampolines },
+  { path: 'login', component: Login },
+  { path: 'register', component: Register },
+  { path: 'contacto', component: Contacto },
+  { path: '**', redirectTo: '' }
+];
+

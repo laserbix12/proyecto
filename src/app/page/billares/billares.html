@@ -1,0 +1,45 @@
+<div class="page-container">
+  <h1>Mesas de Billar</h1>
+  <p class="subtitle">Billar de calidad para aficionados y profesionales</p>
+
+  <div class="products-grid">
+    <article class="product-card">
+      <div class="product-image">
+        <img [src]="img1 || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi_3yd1lm_WvuxoZIdBQQYi0KhF71Q5EPZaA&s'" alt="Producto" style="width: 100%; border-radius: 8px; aspect-ratio: 4/3; object-fit: cover;" />
+      </div>
+      <div class="image-url-row">
+        <input #imgUrl1 type="text" (input)="img1 = imgUrl1.value" placeholder="Pega URL de la imagen" class="image-url-input" />
+        <button type="button" class="copy-btn" (click)="copy(imgUrl1.value)">Copiar URL</button>
+      </div>
+      <h3>Mesa de Billar Clásica</h3>
+      <p class="price">1.299,99 €</p>
+      <button class="btn-add">Agregar al carrito</button>
+    </article>
+
+    <article class="product-card">
+      <div class="product-image">
+        <img [src]="img2 || 'https://marben.net/image/cache/catalog/catalogo/mesas_de_billar/nebraska/mesa_de_billar_nebraska_cherry_01-1200x900.webp'" alt="Producto" style="width: 100%; border-radius: 8px; aspect-ratio: 4/3; object-fit: cover;" />
+      </div>
+      <div class="image-url-row">
+        <input #imgUrl2 type="text" (input)="img2 = imgUrl2.value" placeholder="Pega URL de la imagen" class="image-url-input" />
+        <button type="button" class="copy-btn" (click)="copy(imgUrl2.value)">Copiar URL</button>
+      </div>
+      <h3>Mesa de Billar Profesional</h3>
+      <p class="price">2.499,99 €</p>
+      <button class="btn-add">Agregar al carrito</button>
+    </article>
+
+    <article class="product-card">
+      <div class="product-image">
+        <img [src]="img3 || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4cZvCOUAZU9pqiBMLMMx9L2WszkOUIxss1g&s'" alt="Producto" style="width: 100%; border-radius: 8px; aspect-ratio: 4/3; object-fit: cover;" />
+      </div>
+      <div class="image-url-row">
+        <input #imgUrl3 type="text" (input)="img3 = imgUrl3.value" placeholder="Pega URL de la imagen" class="image-url-input" />
+        <button type="button" class="copy-btn" (click)="copy(imgUrl3.value)">Copiar URL</button>
+      </div>
+      <h3>Mesa de Billar Madera Premium</h3>
+      <p class="price">3.999,99 €</p>
+      <button class="btn-add">Agregar al carrito</button>
+    </article>
+  </div>
+</div>

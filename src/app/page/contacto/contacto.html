@@ -1,0 +1,48 @@
+<section class="contact-container">
+	<h2>Contacto</h2>
+
+	<form (ngSubmit)="onSubmit()" novalidate class="contact-form">
+		<label>
+			Nombre
+			<input
+				type="text"
+				name="name"
+				[(ngModel)]="name"
+				(blur)="onBlur('name')"
+				[class.input-error]="nameInvalid"
+				placeholder="Tu nombre"
+				required
+			/>
+		</label>
+
+		<label>
+			Correo
+			<input
+				type="email"
+				name="email"
+				[(ngModel)]="email"
+				(blur)="onBlur('email')"
+				[class.input-error]="emailInvalid"
+				placeholder="tu@ejemplo.com"
+				required
+			/>
+		</label>
+
+		<label>
+			Mensaje
+			<textarea
+				name="message"
+				[(ngModel)]="message"
+				(blur)="onBlur('message')"
+				[class.input-error]="messageInvalid"
+				placeholder="Escribe tu mensaje aquí"
+				rows="6"
+				required
+			></textarea>
+		</label>
+
+		<div class="actions">
+			<button type="submit" class="btn">Enviar</button>
+		</div>
+	</form>
+</section>

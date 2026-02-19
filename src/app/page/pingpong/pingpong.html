@@ -1,0 +1,51 @@
+<div class="page-container">
+  <h1>Mesas y Accesorios de Ping Pong</h1>
+  <p class="subtitle">Encuentra tu mesa perfecta para jugar ping pong</p>
+
+  <div class="products-grid">
+    <article class="product-card">
+      <div class="product-image">
+        <img [src]="img1 || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTzTo43eJYMadQ55vZEDxaRg2KQ8CO-t_Q5A&s'" alt="Producto" style="width: 100%; border-radius: 8px; aspect-ratio: 4/3; object-fit: cover;" />
+      </div>
+      <div class="image-url-row">
+        <input #imgUrl1 type="text" (input)="img1 = imgUrl1.value" placeholder="Pega URL de la imagen" class="image-url-input" />
+        <button type="button" class="copy-btn" (click)="copy(imgUrl1.value)">Copiar URL</button>
+      </div>
+      <h3>Mesa Enebe New Lander Indoor</h3>
+      <p class="price">359,95 €</p>
+      <p class="original-price">420,00 €</p>
+      <span class="discount">-60,05 €</span>
+      <button class="btn-add">Agregar al carrito</button>
+    </article>
+
+    <article class="product-card">
+      <div class="product-image">
+        <img [src]="img2 || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTzTo43eJYMadQ55vZEDxaRg2KQ8CO-t_Q5A&s'" alt="Producto" style="width: 100%; border-radius: 8px; aspect-ratio: 4/3; object-fit: cover;" />
+      </div>
+      <div class="image-url-row">
+        <input #imgUrl2 type="text" (input)="img2 = imgUrl2.value" placeholder="Pega URL de la imagen" class="image-url-input" />
+        <button type="button" class="copy-btn" (click)="copy(imgUrl2.value)">Copiar URL</button>
+      </div>
+      <h3>Mesa Enebe Game X3 Outdoor</h3>
+      <p class="price">569,00 €</p>
+      <p class="original-price">645,00 €</p>
+      <span class="discount">-76,00 €</span>
+      <button class="btn-add">Agregar al carrito</button>
+    </article>
+
+    <article class="product-card">
+      <div class="product-image">
+        <img [src]="img3 || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRITQmZWbUByIraqHNKS8jVrOZXcdb2s9FcZA&s'" alt="Producto" style="width: 100%; border-radius: 8px; aspect-ratio: 4/3; object-fit: cover;" />
+      </div>
+      <div class="image-url-row">
+        <input #imgUrl3 type="text" (input)="img3 = imgUrl3.value" placeholder="Pega URL de la imagen" class="image-url-input" />
+        <button type="button" class="copy-btn" (click)="copy(imgUrl3.value)">Copiar URL</button>
+      </div>
+      <h3>Mesa Enebe Master Indoor</h3>
+      <p class="price">599,00 €</p>
+      <p class="original-price">670,00 €</p>
+      <span class="discount">-71,00 €</span>
+      <button class="btn-add">Agregar al carrito</button>
+    </article>
+  </div>
+</div>
