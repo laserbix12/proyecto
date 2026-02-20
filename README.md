@@ -2,6 +2,8 @@
 
 Este es mi proyecto de PingPong en Angular.
 
+¡Hola! He actualizado este archivo para probar que Git funciona correctamente.
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
 
 ## Development server
