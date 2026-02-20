@@ -1,2 +1,0 @@
-export default `*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;background-color:#fff;color:#333;line-height:1.6}html,body{height:100%;width:100%}a{color:#06c;text-decoration:none;transition:color .2s}a:hover{color:#0052a3}button{font-family:inherit}
-`;
