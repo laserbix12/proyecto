@@ -10,6 +10,7 @@ import { Multijuegos } from './page/multijuegos/multijuegos';
 import { Login } from './page/login/login';
 import { Register } from './page/register/register';
 import { Contacto } from './page/contacto/contacto';
+import { TodosProductos } from './todos-productos/todos-productos';
 
 export const routes: Routes = [
   { path: '', component: Multijuegos },
@@ -23,6 +24,6 @@ export const routes: Routes = [
   { path: 'login', component: Login },
   { path: 'register', component: Register },
   { path: 'contacto', component: Contacto },
+  { path: 'todos-productos', component: TodosProductos },
   { path: '**', redirectTo: '' }
 ];
-
