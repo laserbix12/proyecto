@@ -1,6 +1,7 @@
 <div class="contenedor-productos">
 
-  <div class="tarjeta-producto" *ngFor="let producto of productos">
+  @for (producto of productos; track producto.id) {
+  <div class="tarjeta-producto">
 
     <img [src]="producto.imagen || 'https://via.placeholder.com/150'" alt="Imagen de {{ producto.nombre }}">
 
@@ -9,5 +10,6 @@
 
     <button class="btn-comprar" (click)="comprar(producto)">Añadir al carrito</button>
   </div>
+  }
 
 </div>

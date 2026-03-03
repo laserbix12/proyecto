@@ -1,48 +1,61 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { Router } from '@angular/router';
+import { Productos } from '../services/productos';
+import { CarritoService } from '../services/carrito.service';
 
 @Component({
   selector: 'app-todos-productos',
+  standalone: true,
+  imports: [],
   templateUrl: './todos-productos.component.html',
   styleUrls: ['./todos-productos.component.css']
 })
-export class TodosProductosComponent {
+export class TodosProductosComponent implements OnInit {
+  private productosService = inject(Productos);
+  private carritoService: CarritoService = inject(CarritoService);
+  private router = inject(Router);
 
   // Creamos un arreglo básico con objetos que representan nuestros artículos deportivos
   // Aquí estamos simulando lo que más adelante traerás de una base de datos
-  productos = [
+  productos: any[] = [
     {
       id: 1,
       nombre: 'Mesa de Ping Pong Pro',
       precio: 250,
-      imagen: '' // Como está vacío, tu HTML usará el placeholder automáticamente
+      imagen: 'data:image/jpeg;base64,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'
     },
     {
       id: 2,
       nombre: 'Raqueta Profesional',
       precio: 45,
-      imagen: ''
+      imagen: 'https://exitocol.vteximg.com.br/arquivos/ids/27196300/raquetas-para-tenis-mesa-sportfitness.jpg?v=638796460049930000'
     },
     {
       id: 3,
       nombre: 'Set de Pelotas x6',
       precio: 10,
-      imagen: ''
+      imagen: 'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR24Eo_qh4ewVyIP8GSZPY3SJpI3_UdC-fSI44uy80W5FiEtvpO6jeVsee-6yYkSQWeqrC-S_vVeDmjyFAaT1ySs27fBNAlQ4by4sxk1ZG8OeNuBLDWAniUuJ0'
     },
     {
       id: 4,
       nombre: 'Red de Repuesto',
       precio: 15,
-      imagen: ''
+      imagen: 'https://http2.mlstatic.com/D_NQ_NP_898237-MCO101662627669_122025-O.webp'
     }
   ];
 
+  ngOnInit() {
+    const storedProducts = this.productosService.getProducts();
+    if (storedProducts) {
+      this.productos = [...this.productos, ...storedProducts];
+    }
+  }
+
   // 2. Creamos la función 'comprar' que tu botón llama al hacer (click)
   comprar(producto: any) {
-    // Imprimimos en la consola para verificar que funciona
-    console.log('Agregando al carrito:', producto.nombre);
-
-    // Mostramos una alerta temporal al usuario
-    alert(`¡Has añadido ${producto.nombre} a tu carrito!`);
+    // Delegamos la lógica al servicio
+    this.carritoService.agregarProducto(producto);
+    this.router.navigate(['/contacto']);
   }
 
 }
